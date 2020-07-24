@@ -9,7 +9,7 @@ view.setActiveScreen = (screenName) =>{
                 const registerInfo = {
                 firstName: registerForm.firstName.value,    
                 lastName: registerForm.lastName.value,
-                email: registerForm.email.value,
+                 email: registerForm.email.value,
                 password: registerForm.password.value,
                 confirmPassword: registerForm.confirmPassword.value,
                 }

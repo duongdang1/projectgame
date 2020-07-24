@@ -25,7 +25,7 @@ components.registerScreen = `
         </div>
         <div class="input-wrapper">
             <input type="text" name="confirmPassword" placeholder="confirm password...">
-            <div class="error" id="error-confirmPassword"></div>
+            <div class="error" id="error-confirm-password"></div>
         </div>
         <div class="submit-wrapper">
             <div class = "account-exist">Already have an account? <span class="cursor-pointer" id="redirect-to-login">Login</span></div>

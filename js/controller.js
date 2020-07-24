@@ -48,14 +48,14 @@ controller.register = (registerInfo) => {
 }
 controller.login = ({email, password}) => {
   if (email === '') {
-    view.setErrorMessage('error-email', 'Please input email')
+    view.setErrorMessage('error-email-name', 'Please input email')
   } else {
-    view.setErrorMessage('error-email', '')
+    view.setErrorMessage('error-email-name', '')
   }
   if (password === '') {
-    view.setErrorMessage('error-password', 'Please input password')
+    view.setErrorMessage('error-password-name', 'Please input password')
   } else {
-    view.setErrorMessage('error-password', '')
+    view.setErrorMessage('error-password-name', '')
   }
   if(email !== '' && password !== '') {
     model.login(email, password)

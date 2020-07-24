@@ -22,7 +22,7 @@ window.onload = () => {
             displayName: user.displayName,
             email: user.email
           }
-          view.setActiveScreen('chatScreen')
+          view.setActiveScreen('menuScreen')
         } else {
           view.setActiveScreen('loginScreen')
           alert('Please verify your email')
@@ -45,7 +45,7 @@ window.onload = () => {
       }
       if (user) {
   
-        view.setActiveScreen('welcomeScreen')
+        view.setActiveScreen('menuScreen')
   
       } else {
         // No user is signed in
