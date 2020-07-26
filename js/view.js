@@ -49,6 +49,10 @@ view.setActiveScreen = (screenName) =>{
                 e.preventDefault()
                 view.setActiveScreen('gameScreen')
             })
+            break
+        
+        case 'gameScreen':
+            document.getElementById('app').innerHTML = components.gameScreen
 
 
         }

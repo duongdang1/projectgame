@@ -66,12 +66,30 @@ components.loginScreen = `
 `
 
 components.menuScreen = `
-<div class = "menu-container">
-    <div class = "game-title"></div>
-    <div class = "game-selection"></div>
-    <div class = "add-game">
-        <div><span class = "cursor-pointer" id="redirect-to-game">NEW GAME</span></div>
+<div class="menu-container"> 
+
+    <div class="name-title">The Caro</div>
+    <div class="add-game">
+        
+        <button class="button" id="redirect-to-game" type="submit">CREATE NEW GAME</button>
     </div>
+
 </div>
 
+`
+
+components.gameScreen = `
+<div class="game-container">
+    <div class="name-title">The Caro</div>
+    <div id = "divmain">
+    <table id="table">
+    </table>
+    </div>
+    <div id="divcontrol">
+    <div id="label1"><b>CURENT PLAYER:</b></div>
+    <div id="imgPlayer"></div>
+    <br/>
+    <input type="button" class="button" value="PLAYER VS PLAYER" onClick="PvsP()"/>
+    </div>
+</div<
 `

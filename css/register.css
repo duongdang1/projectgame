@@ -1,5 +1,5 @@
 .register-container{
-    background: url(../images/game.jpg);
+    background: url(../images/game2.jpg);
     height: 100vh;
     background-size: cover;
     text-align: center;
@@ -7,7 +7,7 @@
   }
 
   .login-container{
-      background:url(../images/game.jpg);
+      background:url(../images/game2.jpg);
       height: 100vh;
       background-size: cover;
       text-align: center;
