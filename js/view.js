@@ -9,7 +9,7 @@ view.setActiveScreen = (screenName) =>{
                 const registerInfo = {
                 firstName: registerForm.firstName.value,    
                 lastName: registerForm.lastName.value,
-                 email: registerForm.email.value,
+                email: registerForm.email.value,
                 password: registerForm.password.value,
                 confirmPassword: registerForm.confirmPassword.value,
                 }
@@ -44,20 +44,43 @@ view.setActiveScreen = (screenName) =>{
             break
         case 'menuScreen':
             document.getElementById('app').innerHTML = components.menuScreen 
-            const switchscreen2 = document.getElementById('redirect-to-game')
-            switchscreen2.addEventListener('click',(e)=>{
+            
+          
+            const addRoom = document.getElementById('add-room')
+            addRoom.addEventListener('click',(e)=>{
                 e.preventDefault()
-                view.setActiveScreen('gameScreen')
+                model.createNewGame({name: model.listRoom.length + 1})
             })
-            break
-        
+            // const switchScreen2 = document.getElementById('go-to-room')
+            // switchScreen2.addEventListener('click',(e)=>{
+                
+            //     view.setActiveScreen('gameScreen')
+            // })
+            model.listenRoomChange()
+            
+            
+            
+            break        
         case 'gameScreen':
             document.getElementById('app').innerHTML = components.gameScreen
-
-
         }
 }
 view.setErrorMessage = (elementId, message) => {
     document.getElementById(elementId).innerText = message
   }
+
+view.createNewGame = (room) => {
+    const gameWrapper = document.createElement('div')
+    gameWrapper.classList.add('room')
+    gameWrapper.innerHTML = `
+    <button class="button" id="go-to-room" type="submit">GO TO ROOM ${model.listRoom.length}</button>
+    `
+    gameWrapper.addEventListener('click',() => {
+        console.log(room)
+        model.currentRoom = room
+        view.setActiveScreen('gameScreen')
+        model.addUser(model.currentUser.email)
+    })
+    document.querySelector('.room-list').appendChild(gameWrapper)
+}
   

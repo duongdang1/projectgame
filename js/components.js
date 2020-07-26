@@ -69,9 +69,16 @@ components.menuScreen = `
 <div class="menu-container"> 
 
     <div class="name-title">The Caro</div>
+    
+    <div class="room-list">
+        
+    </div>
+    
+    
+    
     <div class="add-game">
         
-        <button class="button" id="redirect-to-game" type="submit">CREATE NEW GAME</button>
+        <button class="button" id="add-room" type="submit">CREATE NEW GAME</button>
     </div>
 
 </div>
@@ -88,6 +95,9 @@ components.gameScreen = `
     <div id="divcontrol">
     <div id="label1"><b>CURENT PLAYER:</b></div>
     <div id="imgPlayer"></div>
+    <br/>
+    <progress id="pgrTime" max="100" value="100"></progress>
+    <time></time>
     <br/>
     <input type="button" class="button" value="PLAYER VS PLAYER" onClick="PvsP()"/>
     </div>

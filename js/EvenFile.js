@@ -40,6 +40,7 @@ function Loaded()
 //Play Game
 function Click(id)
 {
+	GetLocation();
 	if (!InGame) return;
 	var square = document.getElementsByClassName("square");
 	var pos = parseInt(id);
@@ -137,7 +138,17 @@ function WinGame()
 	}
 	return result;
 }
-
+function GetLocation()
+{
+	var Location = [];
+	var sqr = document.getElementsByClassName("square");
+	for (i = 0; i < size*size;i++)
+	{
+		Location.push(parseInt(sqr.item(i).getAttribute("player")));
+	}
+	console.log('Location')
+	return Location;
+}
 // Win Dir
 function winHor(x,y,Board)
 {

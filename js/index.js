@@ -1,14 +1,14 @@
 window.onload = () => {
     
     var firebaseConfig = {
-        apiKey: "AIzaSyC1JmYlOZYOoBuo_hxPkBzzeEO-03FBbBE",
-        authDomain: "fir-4b212.firebaseapp.com",
-        databaseURL: "https://fir-4b212.firebaseio.com",
-        projectId: "fir-4b212",
-        storageBucket: "fir-4b212.appspot.com",
-        messagingSenderId: "139664618809",
-        appId: "1:139664618809:web:cc90ecbb3b34b5316964e8",
-        measurementId: "G-6WTC57Y8QT"
+      apiKey: "AIzaSyC1JmYlOZYOoBuo_hxPkBzzeEO-03FBbBE",
+      authDomain: "fir-4b212.firebaseapp.com",
+      databaseURL: "https://fir-4b212.firebaseio.com",
+      projectId: "fir-4b212",
+      storageBucket: "fir-4b212.appspot.com",
+      messagingSenderId: "139664618809",
+      appId: "1:139664618809:web:cc90ecbb3b34b5316964e8",
+      measurementId: "G-6WTC57Y8QT"
       };
      
     // Initialize Firebase
