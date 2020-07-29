@@ -57,17 +57,8 @@ components.loginScreen = `
         </div>
        </div>
     </form>
-<<<<<<< HEAD
 </div>
 </div>
-=======
-
-
-</div>
-</div>
-
-
->>>>>>> e86f9435a69964990ae91f09a8a0e0a1831aa83e
 `
 
 components.menuScreen = `
@@ -78,12 +69,6 @@ components.menuScreen = `
     <div class="room-list">
         
     </div>
-<<<<<<< HEAD
-=======
-    
-    
-    
->>>>>>> e86f9435a69964990ae91f09a8a0e0a1831aa83e
     <div class="add-game">
         
         <button class="button" id="add-room" type="submit">CREATE NEW GAME</button>
@@ -95,7 +80,6 @@ components.menuScreen = `
 
 components.gameScreen = `
 <div class="game-container">
-<<<<<<< HEAD
 <form id="game-form">
 <div class="name-title">The Caro</div>
 <div id = "divmain">
@@ -113,21 +97,4 @@ components.gameScreen = `
 </div>
 </form>  
 </div>
-=======
-    <div class="name-title">The Caro</div>
-    <div id = "divmain">
-    <table id="table">
-    </table>
-    </div>
-    <div id="divcontrol">
-    <div id="label1"><b>CURENT PLAYER:</b></div>
-    <div id="imgPlayer"></div>
-    <br/>
-    <progress id="pgrTime" max="100" value="100"></progress>
-    <time></time>
-    <br/>
-    <input type="button" class="button" value="PLAYER VS PLAYER" onClick="PvsP()"/>
-    </div>
-</div<
->>>>>>> e86f9435a69964990ae91f09a8a0e0a1831aa83e
 `
