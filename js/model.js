@@ -24,15 +24,15 @@ model.register = (firstName, lastName, email, password) => {
 model.login = (email, password) => {
     firebase.auth().signInWithEmailAndPassword(email, password).then((user) => {
         console.log(user)
-        // if (user.user.emailVerified) {
-        //     model.currentUser = {
-        //         displayName: user.user.displayName,
-        //         email: user.user.email
-        //     }
-        //     view.setActiveScreen('welcomeScreen')
-        // } else {
-        //     alert('Please verify your email!')
-        // }
+        if (user.user.emailVerified) {
+            model.currentUser = {
+                displayName: user.user.displayName,
+                email: user.user.email
+            }
+            view.setActiveScreen('menuScreen')
+        } else {
+            alert('Please verify your email!')
+        }
 
 
     }).catch((err) => {
@@ -72,12 +72,14 @@ model.listenGameChange=(id)=>{
         console.log(res)
     const docChange = utils.getDataFromDoc(res)
     console.log(docChange)
-    })
     if(!isFistRun){
         isFistRun = true
         return
       }
-    
+    // console.log(docChange.locations[0].pos)
+    Click(docChange.locations[docChange.locations.length - 1].pos)
+    })
+
 
 }
 model.addUser = (email) =>{

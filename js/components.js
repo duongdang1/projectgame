@@ -20,11 +20,11 @@ components.registerScreen = `
             <div class="error" id="error-email-name"></div>
         </div>
         <div class="input-wrapper">
-            <input type="text" name="password" placeholder="Password...">
+            <input type="password" name="password" placeholder="Password...">
             <div class="error" id="error-password-name"></div>
         </div>
         <div class="input-wrapper">
-            <input type="text" name="confirmPassword" placeholder="confirm password...">
+            <input type="password" name="confirmPassword" placeholder="confirm password...">
             <div class="error" id="error-confirm-password"></div>
         </div>
         <div class="submit-wrapper">

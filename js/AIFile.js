@@ -41,10 +41,4 @@ function GetBoard()
 	for (i = 0; i < size*size;i++)
 		TBoard.push(parseInt(sqr.item(i).getAttribute("player")));
 	return TBoard;
-<<<<<<< HEAD
 }
-=======
-}
-
-
->>>>>>> e86f9435a69964990ae91f09a8a0e0a1831aa83e
