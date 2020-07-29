@@ -61,7 +61,7 @@ view.setActiveScreen = (screenName) =>{
             break        
         case 'gameScreen':
             document.getElementById('app').innerHTML = components.gameScreen
-            // model.listenGameChange();
+            
             // model.loadconversations();
         }
 }

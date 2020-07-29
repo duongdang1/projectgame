@@ -5,6 +5,8 @@ model.currentConversation = undefined
 model.listRoom = []
 model.currentRoom = undefined
 model.rooms = undefined
+var l_played = []
+
 model.register = (firstName, lastName, email, password) => {
     firebase.auth().createUserWithEmailAndPassword(email, password).then((user) => {
         console.log(user)
@@ -69,15 +71,41 @@ model.listenRoomChange = () =>{
 model.listenGameChange=(id)=>{
     let isFistRun = false
     firebase.firestore().collection(model.collectionName).doc(id).onSnapshot((res)=>{
-        console.log(res)
+        // console.log(res)
     const docChange = utils.getDataFromDoc(res)
     console.log(docChange)
+    console.log(docChange.locations[0].pos)
+    
+    if(docChange.locations[docChange.locations.length - 1].cplayer == 0)
+    {
+        
+        var path1 = "url('../Images/Opng.png')";
+    }
+    else if(docChange.locations[docChange.locations.length - 1].cplayer == 1)
+    {
+        var path1 = "url('../Images/Xpng.png')";
+    }
+    var square = document.getElementsByClassName("square");
+    square.item(docChange.locations[docChange.locations.length - 1].pos).style.backgroundImage = path1;
+    l_played.push(docChange.locations[docChange.locations.length - 1].pos)
+    // var square = document.getElementsByClassName("square");
+    // for(let i=0;i<256;i++)
+	// {
+	// 	if(square.item(id).style.backgroundImage == "url('../Images/Opng.png')" )
+	// 	{
+	// 		CPlayer = 1;
+	// 	}
+	// 	else if(square.item(id).style.backgroundImage == "url('../Images/Xpng.png')")
+	// 	{
+	// 		CPlayer = 0;
+	// 	}
+	// }
     if(!isFistRun){
         isFistRun = true
         return
       }
     // console.log(docChange.locations[0].pos)
-    Click(docChange.locations[docChange.locations.length - 1].pos)
+    
     })
 
 

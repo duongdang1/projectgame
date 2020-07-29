@@ -57,7 +57,6 @@ function Click(id)
 		  }
 	model.addlocation(location)
 
-	
 	var win = WinGame();
 	var pwin = CPlayer;
 	
@@ -146,6 +145,7 @@ function WinGame()
 	return result;
 }
 // Win Dir
+
 function winHor(x,y,Board)
 {
 	l_win = [];
