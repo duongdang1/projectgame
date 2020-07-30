@@ -69,26 +69,26 @@ function Click(id)
 	var win = WinGame();
 	var pwin = CPlayer;	
 		  changePlayer();
+		  if (!win)
+		  {
+			  // AIMode();
+			  win = WinGame();
+			  pwin = 1;
+		  }
+	  
+		  if (win)
+		  {
+		  var mess = 'Player with "X" win';
+		  if (pwin == 0) mess = 'Player with "O" win';
+		  alert(mess);
+		  InGame = false;
+		  }
+		  else
+		  {
+		  var pgr = document.getElementById("pgrTime");
+		  pgr.value = pgr.getAttribute("max");
+		  }
 
-		if (!win)
-		{
-			// AIMode();
-			win = WinGame();
-			pwin = 1;
-		}
-
-	if (win)
-	{
-		var mess = 'Player with "X" win';
-		if (pwin == 0) mess = 'Player with "O" win';
-		alert(mess);
-		InGame = false;
-	}
-	else
-	{
-		var pgr = document.getElementById("pgrTime");
-		pgr.value = pgr.getAttribute("max");
-	}
 }
 
 // Min Max
