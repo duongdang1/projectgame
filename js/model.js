@@ -89,11 +89,8 @@ model.listenGameChange=(id)=>{
     square.item(docChange.locations[docChange.locations.length - 1].pos).style.backgroundImage = path1;
     square.item(docChange.locations[docChange.locations.length - 1].pos).setAttribute("player",cp.toString());
     l_played.push(docChange.locations[docChange.locations.length - 1].pos)
-    // console.log(docChange.locations[0].pos)
-    
+    // console.log(docChange.locations[0].pos)   
     })
-
-
 }
 model.addUser = (email) =>{
     const dataToUpdate = {
