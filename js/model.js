@@ -74,36 +74,21 @@ model.listenGameChange=(id)=>{
         // console.log(res)
     const docChange = utils.getDataFromDoc(res)
     console.log(docChange)
-    console.log(docChange.locations[0].pos)
-    
-    if(docChange.locations[docChange.locations.length - 1].cplayer == 0)
-    {
-        
-        var path1 = "url('../Images/Opng.png')";
-    }
-    else if(docChange.locations[docChange.locations.length - 1].cplayer == 1)
-    {
-        var path1 = "url('../Images/Xpng.png')";
-    }
-    var square = document.getElementsByClassName("square");
-    square.item(docChange.locations[docChange.locations.length - 1].pos).style.backgroundImage = path1;
-    l_played.push(docChange.locations[docChange.locations.length - 1].pos)
-    // var square = document.getElementsByClassName("square");
-    // for(let i=0;i<256;i++)
-	// {
-	// 	if(square.item(id).style.backgroundImage == "url('../Images/Opng.png')" )
-	// 	{
-	// 		CPlayer = 1;
-	// 	}
-	// 	else if(square.item(id).style.backgroundImage == "url('../Images/Xpng.png')")
-	// 	{
-	// 		CPlayer = 0;
-	// 	}
-	// }
     if(!isFistRun){
         isFistRun = true
         return
       }
+    // Click(docChange.locations[docChange.locations.length - 1].pos)
+    var cp=docChange.locations[docChange.locations.length - 1].cplayer 
+        var path1 = "url('../Images/Opng.png')";
+    if(cp == 1)
+    {
+         path1 = "url('../Images/Xpng.png')";
+    }
+    var square = document.getElementsByClassName("square");
+    square.item(docChange.locations[docChange.locations.length - 1].pos).style.backgroundImage = path1;
+    square.item(docChange.locations[docChange.locations.length - 1].pos).setAttribute("player",cp.toString());
+    l_played.push(docChange.locations[docChange.locations.length - 1].pos)
     // console.log(docChange.locations[0].pos)
     
     })

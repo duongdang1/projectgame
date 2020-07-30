@@ -43,23 +43,19 @@ function Click(id)
 	if (!InGame) return;
 	var square = document.getElementsByClassName("square");
 	var pos = parseInt(id);
-	if (square.item(pos).getAttribute("player") != "-1") return;
 	var path = "url('../Images/Opng.png')";
 	if (CPlayer == 1) path = "url('../Images/Xpng.png')";
 	square.item(pos).style.backgroundImage = path;
 	square.item(pos).setAttribute("player",CPlayer.toString());
 	l_played.push(pos);
-
 		const location = {
 			owner: model.currentUser.email,
 			cplayer: CPlayer,
 			pos: pos,
 		  }
 	model.addlocation(location)
-
 	var win = WinGame();
-	var pwin = CPlayer;
-	
+	var pwin = CPlayer;	
 	if (!AI)
 	{
 		if (CPlayer == 0) CPlayer = 1;

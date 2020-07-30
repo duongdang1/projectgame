@@ -84,11 +84,11 @@ view.createNewGame = (room) => {
     })
     document.querySelector('.room-list').appendChild(gameWrapper)
 }
-view.addlocation=(location)=>{
-    EvenFile.Click=(id)=>{
-        l_played.push(Location.pos);
-    };
-}
+// view.addlocation=(location)=>{
+//     EvenFile.Click=(id)=>{
+//         l_played.push(Location.pos);
+//     };
+// }
 view.showCurrentConversation = ()=>{
 
     for(let onelocation of model.currentConversation.locations){
