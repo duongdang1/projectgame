@@ -71,7 +71,7 @@ components.menuScreen = `
     </div>
     <div class="add-game">   
         <button class="button" id="add-room" type="submit">CREATE NEW GAME</button>
-            <button class="button" id="exit" type="submit">   login </button>
+            <button class="button" id="exit" type="submit">     LOGOUT    </button>
     </div>
 
 </div>
