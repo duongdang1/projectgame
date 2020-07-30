@@ -6,6 +6,8 @@ model.listRoom = []
 model.currentRoom = undefined
 model.rooms = undefined
 var l_played = []
+model.listLocation = 0;
+
 
 model.register = (firstName, lastName, email, password) => {
     firebase.auth().createUserWithEmailAndPassword(email, password).then((user) => {
@@ -78,9 +80,12 @@ model.listenGameChange=(id)=>{
         isFistRun = true
         return
       }
+
     // Click(docChange.locations[docChange.locations.length - 1].pos)
     var cp=docChange.locations[docChange.locations.length - 1].cplayer 
-        var path1 = "url('../Images/Opng.png')";
+    CPlayer = cp;
+    changePlayer();
+    var path1 = "url('../Images/Opng.png')";
     if(cp == 1)
     {
          path1 = "url('../Images/Xpng.png')";

@@ -36,7 +36,16 @@ function Loaded()
 		}
 	}
 }
-
+function changePlayer()
+{
+	if (CPlayer == 0) CPlayer = 1;
+	else CPlayer = 0;
+	
+	var iplayer = "url('../Images/Opng.png')";
+	if (CPlayer == 1) iplayer = "url('../Images/Xpng.png')";
+	var imgp = document.getElementById("imgPlayer");
+	imgp.style.backgroundImage = iplayer;
+}
 //Play Game
 function Click(id)
 {
@@ -50,20 +59,16 @@ function Click(id)
 	square.item(pos).setAttribute("player",CPlayer.toString());
 	l_played.push(pos);
 		const location = {
+			list:model.listLocation,
 			owner: model.currentUser.email,
 			cplayer: CPlayer,
 			pos: pos,
 		  }
+	model.listLocation+=1;
 	model.addlocation(location)
 	var win = WinGame();
 	var pwin = CPlayer;	
-		if (CPlayer == 0) CPlayer = 1;
-		else CPlayer = 0;
-		
-		var iplayer = "url('../Images/Opng.png')";
-		if (CPlayer == 1) iplayer = "url('../Images/Xpng.png')";
-		var imgp = document.getElementById("imgPlayer");
-		imgp.style.backgroundImage = iplayer;
+		  changePlayer();
 
 		if (!win)
 		{
