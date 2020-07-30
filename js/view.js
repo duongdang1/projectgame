@@ -52,6 +52,11 @@ view.setActiveScreen = (screenName) =>{
                 model.createNewGame({name: model.listRoom.length + 1})
             })
             model.listenRoomChange()
+            const exit = document.getElementById('exit')
+            exit.addEventListener('click',(e)=>{
+                e.preventDefault()
+                view.setActiveScreen('loginScreen')
+            })
             // const switchScreen2 = document.getElementById('go-to-room')
             // switchScreen2.addEventListener('click',(e)=>{
                 
@@ -64,7 +69,6 @@ view.setActiveScreen = (screenName) =>{
             const deleteRoom = document.getElementById('divcontrol')
             deleteRoom.addEventListener('submit',(e)=>{
                e.preventDefault()
-            
                 //    firebase.firestore().collection(model.collectionName).doc(model.currentRoom.id).delete()
  
                 view.setActiveScreen('menuScreen')
