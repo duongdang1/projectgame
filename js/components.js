@@ -94,8 +94,10 @@ components.gameScreen = `
 <time></time>
 <br/>
 <input type="button" class="button" value="PLAYER VS PLAYER" onClick="PvsP()"/>
-<input type="submit" class="button" value="EXIT&DELETE ROOM" onClick="deleteRoom()"/>
-<input type="submit" class="button" value="      EXIT      " />
+<br/>
+<input type="submit" class="button" value="EXIT&DELETEROOM" onClick="deleteRoom()"/>
+<br/>
+<input type="submit" class="button" value="            EXIT            " />
 </div>
 </form>  
 </div>
