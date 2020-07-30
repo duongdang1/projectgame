@@ -80,22 +80,19 @@ model.listenGameChange=(id)=>{
         isFistRun = true
         return
       }
-
-    // Click(docChange.locations[docChange.locations.length - 1].pos)
-    var cp=docChange.locations[docChange.locations.length - 1].cplayer 
-    CPlayer = cp;
-    changePlayer();
-    var path1 = "url('../Images/Opng.png')";
-    if(cp == 1)
-    {
-         path1 = "url('../Images/Xpng.png')";
-    }
-    var square = document.getElementsByClassName("square");
-    square.item(docChange.locations[docChange.locations.length - 1].pos).style.backgroundImage = path1;
-    square.item(docChange.locations[docChange.locations.length - 1].pos).setAttribute("player",cp.toString());
-    l_played.push(docChange.locations[docChange.locations.length - 1].pos)
-    
-    // console.log(docChange.locations[0].pos)
+    Click(docChange.locations[docChange.locations.length - 1].pos)
+    // var cp=docChange.locations[docChange.locations.length - 1].cplayer 
+    // CPlayer = cp;
+    // changePlayer();
+    // var path1 = "url('../Images/Opng.png')";
+    // if(cp == 1)
+    // {
+    //      path1 = "url('../Images/Xpng.png')";
+    // }
+    // var square = document.getElementsByClassName("square");
+    // square.item(docChange.locations[docChange.locations.length - 1].pos).style.backgroundImage = path1;
+    // square.item(docChange.locations[docChange.locations.length - 1].pos).setAttribute("player",cp.toString());
+    // l_played.push(docChange.locations[docChange.locations.length - 1].pos)
     
     })
 

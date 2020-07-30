@@ -52,6 +52,7 @@ function Click(id)
 	if (!InGame) return;	
 	var square = document.getElementsByClassName("square");
 	var pos = parseInt(id);
+	if (square.item(pos).getAttribute("player") != "-1") return;
 	var path = "url('../Images/Opng.png')";
 	if (CPlayer == 1) path = "url('../Images/Xpng.png')";
 	square.item(pos).style.backgroundImage = path;
@@ -65,8 +66,7 @@ function Click(id)
 		  }
 	model.listLocation+=1;
 	model.addlocation(location)
-	var win = WinGame();
-	var pwin = CPlayer;	
+	var win = WinGame();	
 		  changePlayer();
 		  if (!win)
 		  {
@@ -77,9 +77,6 @@ function Click(id)
 	  
 		  if (win)
 		  {
-		  var mess = 'Player with "X" win';
-		  if (pwin == 0) mess = 'Player with "O" win';
-		  alert(mess);
 		  InGame = false;
 		  }
 		  else
@@ -87,7 +84,6 @@ function Click(id)
 		  var pgr = document.getElementById("pgrTime");
 		  pgr.value = pgr.getAttribute("max");
 		  }
-
 }
 
 // Min Max
@@ -102,21 +98,21 @@ function minab(a,b)
 	else return b;
 }
 
-function MouseOver(id)
-{
-	if (!InGame) return;
-	var square = document.getElementsByClassName("square");
-	var pos = parseInt(id);
-	square.item(pos).style.backgroundColor = "#3F3";
-}
+// function MouseOver(id)
+// {
+// 	if (!InGame) return;
+// 	var square = document.getElementsByClassName("square");
+// 	var pos = parseInt(id);
+// 	square.item(pos).style.backgroundColor = "#3F3";
+// }
 
-function MouseOut(id)
-{
-	if (!InGame) return;
-	var square = document.getElementsByClassName("square");
-	var pos = parseInt(id);
-	square.item(pos).style.backgroundColor = "#FFF";
-}
+// function MouseOut(id)
+// {
+// 	if (!InGame) return;
+// 	var square = document.getElementsByClassName("square");
+// 	var pos = parseInt(id);
+// 	square.item(pos).style.backgroundColor = "#FFF";
+// }
 
 function WinGame()
 {
