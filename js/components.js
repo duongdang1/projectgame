@@ -69,9 +69,10 @@ components.menuScreen = `
     <div class="room-list">
         
     </div>
-    <div class="add-game">   
+    <div class="add-game">
+        
         <button class="button" id="add-room" type="submit">CREATE NEW GAME</button>
-            <button class="button" id="exit" type="submit">     LOGOUT    </button>
+            <button class="button" id="exit" type="submit">     lOGOUT     </button>
     </div>
 
 </div>
@@ -95,7 +96,7 @@ components.gameScreen = `
 <br/>
 <input type="button" class="button" value="PLAYER VS PLAYER" onClick="PvsP()"/>
 <br/>
-<input type="submit" class="button" value="EXIT&DELETEROOM" onClick="deleteRoom()"/>
+<input type="submit" class="button" value="EXIT & DELETEROOM" onClick="deleteRoom()"/>
 <br/>
 <input type="submit" class="button" value="            EXIT            " />
 </div>

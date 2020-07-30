@@ -40,7 +40,7 @@ view.setActiveScreen = (screenName) =>{
                 }
                 controller.login(loginInfo)
             })
-            
+        
             break
         case 'menuScreen':
             document.getElementById('app').innerHTML = components.menuScreen 
@@ -85,7 +85,7 @@ view.createNewGame = (room) => {
     gameWrapper.classList.add('room')
     gameWrapper.innerHTML = `
     <button class="button" id="go-to-room" type="submit">GO TO ROOM ${model.listRoom.length}</button>
-    ` 
+    `
     gameWrapper.addEventListener('click',() => {
         console.log(room)
         model.currentRoom = room
@@ -94,7 +94,6 @@ view.createNewGame = (room) => {
         model.listenGameChange(room.id)   
     })
     document.querySelector('.room-list').appendChild(gameWrapper)
-
 }
 // view.addlocation=(location)=>{
 //     EvenFile.Click=(id)=>{
