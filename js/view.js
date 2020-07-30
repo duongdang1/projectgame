@@ -61,8 +61,15 @@ view.setActiveScreen = (screenName) =>{
             break        
         case 'gameScreen':
             document.getElementById('app').innerHTML = components.gameScreen
+            const deleteRoom = document.getElementById('divcontrol')
+            deleteRoom.addEventListener('submit',(e)=>{
+               e.preventDefault()
             
-            // model.loadconversations();
+                //    firebase.firestore().collection(model.collectionName).doc(model.currentRoom.id).delete()
+ 
+                view.setActiveScreen('menuScreen')
+            })
+         
         }
 }
 view.setErrorMessage = (elementId, message) => {

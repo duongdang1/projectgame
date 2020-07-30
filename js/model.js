@@ -124,4 +124,4 @@ model.addlocation = (location) =>{
 //     })
 //   }
 
-// firebase.firestore().collection(model.collectionName).doc(model.currentRoom.id).delete()
+

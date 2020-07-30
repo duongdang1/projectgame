@@ -286,7 +286,10 @@ function winCross2(x,y,Board)
 	}
 	return false;
 }
-
+function deleteRoom()
+{
+	firebase.firestore().collection(model.collectionName).doc(model.currentRoom.id).delete()
+}
 // Button Event
 function PvsP()
 {
