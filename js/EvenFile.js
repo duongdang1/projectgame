@@ -7,7 +7,7 @@ var InGame = false;
 var l_played = [], l_win = [];
 var mode = 0; // 0: no block; 1: block
 var timereturn = false;
-
+var AI = false;
 		
 //New Game
 function Loaded()
@@ -41,6 +41,7 @@ function Loaded()
 function Click(id)
 {
 	if (!InGame) return;
+	
 	var square = document.getElementsByClassName("square");
 	var pos = parseInt(id);
 	var path = "url('../Images/Opng.png')";
@@ -63,6 +64,7 @@ function Click(id)
 		if (CPlayer == 1) iplayer = "url('../Images/Xpng.png')";
 		var imgp = document.getElementById("imgPlayer");
 		imgp.style.backgroundImage = iplayer;
+
 		if (!win)
 		{
 			// AIMode();
@@ -111,14 +113,7 @@ function MouseOut(id)
 	var pos = parseInt(id);
 	square.item(pos).style.backgroundColor = "#FFF";
 }
-function GetBoard()
-{
-	var TBoard = [];
-	var sqr = document.getElementsByClassName("square");
-	for (i = 0; i < size*size;i++)
-		TBoard.push(parseInt(sqr.item(i).getAttribute("player")));
-	return TBoard;
-}
+
 function WinGame()
 {
 	var result = false;
@@ -212,7 +207,14 @@ function winVer(x,y,Board)
 	}
 	return false;
 }
-
+function GetBoard()
+{
+	var TBoard = [];
+	var sqr = document.getElementsByClassName("square");
+	for (i = 0; i < size*size;i++)
+		TBoard.push(parseInt(sqr.item(i).getAttribute("player")));
+	return TBoard;
+}
 function winCross1(x,y,Board)
 {
 	l_win = [];
@@ -288,6 +290,7 @@ function winCross2(x,y,Board)
 // Button Event
 function PvsP()
 {
+	AI = false;
 	Loaded();
 	InGame = true;
 	var pgr = document.getElementById("pgrTime");
