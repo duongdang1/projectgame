@@ -49,8 +49,7 @@ function changePlayer()
 //Play Game
 function Click(id)
 {
-	if (!InGame) return;
-	
+	if (!InGame) return;	
 	var square = document.getElementsByClassName("square");
 	var pos = parseInt(id);
 	var path = "url('../Images/Opng.png')";
